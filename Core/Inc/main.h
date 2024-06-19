@@ -53,9 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-#define APP_VERSION     "IOT_H743_20240608_V0.0.9"
-#define APP_START_DATE  "20240608"
-#define USE_FREERTOS    0
+#define APP_VERSION     "IOT_H743_20240619_V0.1.0"
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

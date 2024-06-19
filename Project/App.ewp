@@ -293,7 +293,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>00000000</state>
+                    <state>11111110</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -357,6 +357,18 @@
                     <state>$PROJ_DIR$/../Drivers/STM32H7xx_HAL_Driver/Inc</state>
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Device/ST/STM32H7xx/Include</state>
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
+                    <state>$PROJ_DIR$/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy</state>
+                    <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/include</state>
+                    <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2</state>
+                    <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F</state>
+                    <state>$PROJ_DIR$/../Middlewares/ST/STM32_USB_Device_Library/Core/Inc</state>
+                    <state>$PROJ_DIR$/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc</state>
+                    <state>$PROJ_DIR$/../Middlewares/ST/STM32_USB_Host_Library/Core/Inc</state>
+                    <state>$PROJ_DIR$/../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc</state>
+                    <state>$PROJ_DIR$/../USB_DEVICE/App</state>
+                    <state>$PROJ_DIR$/../USB_DEVICE/Target</state>
+                    <state>$PROJ_DIR$/../USB_HOST/App</state>
+                    <state>$PROJ_DIR$/../USB_HOST/Target</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -372,16 +384,16 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>0</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>0</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCPosIndRopi</name>
@@ -430,7 +442,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -624,7 +636,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state></state>
+                    <state>$PROJ_DIR$/../Core/Inc</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -684,7 +696,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>1</hasPrio>
+                <hasPrio>80</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2196,6 +2208,9 @@
             <group>
                 <name>Core</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\freertos.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
                 </file>
                 <file>
@@ -2203,6 +2218,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_hal_msp.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_hal_timebase_tim.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_it.c</name>
@@ -2252,6 +2270,42 @@
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\user_uart.c</name>
                 </file>
+            </group>
+            <group>
+                <name>USB_DEVICE</name>
+                <group>
+                    <name>App</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\USB_DEVICE\App\usb_device.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\USB_DEVICE\App\usbd_cdc_if.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\USB_DEVICE\App\usbd_desc.c</name>
+                    </file>
+                </group>
+                <group>
+                    <name>Target</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\USB_DEVICE\Target\usbd_conf.c</name>
+                    </file>
+                </group>
+            </group>
+            <group>
+                <name>USB_HOST</name>
+                <group>
+                    <name>App</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\USB_HOST\App\usb_host.c</name>
+                    </file>
+                </group>
+                <group>
+                    <name>Target</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\USB_HOST\Target\usbh_conf.c</name>
+                    </file>
+                </group>
             </group>
         </group>
     </group>
@@ -2531,6 +2585,81 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_wwdg.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_usb.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
+        <name>Middlewares</name>
+        <group>
+            <name>FreeRTOS</name>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\list.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portasm.s</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\tasks.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
+            </file>
+        </group>
+        <group>
+            <name>USB_Device_Library</name>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Src\usbd_cdc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c</name>
+            </file>
+        </group>
+        <group>
+            <name>USB_Host_Library</name>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Host_Library\Class\CDC\Src\usbh_cdc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_pipes.c</name>
             </file>
         </group>
     </group>

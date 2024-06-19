@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Doc\Application\202406072029\H743\Project\settings\App.Debug.general.xcl" --backend -f "C:\Users\ilubi\Doc\Application\202406072029\H743\Project\settings\App.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.general.xcl" --backend -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Doc\Application\202406072029\H743\Project\settings\App.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\ilubi\Doc\Application\202406072029\H743\Project\settings\App.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.driver.xcl" 
 }
