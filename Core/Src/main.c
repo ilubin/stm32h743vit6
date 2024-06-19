@@ -152,8 +152,8 @@ int main(void)
 //  
 //  LCD_Set_Address(0,0,LCD_W-1,LCD_H-1);
 //  HAL_SPI_Transmit(&hspi2,(uint8_t*)imgArray_Flash,LCD_W * LCD_H * 2,HAL_SPI_TIMEOUT_DEFAULT_VALUE);
-  //Camera_Init(FRAMESIZE_QQVGA2);
-  //HAL_DCMI_Start_DMA(&hdcmi, DCMI_MODE_CONTINUOUS, (uint32_t)&pic, FrameWidth * FrameHeight * 2 / 4);
+  Camera_Init(FRAMESIZE_QQVGA2);
+  HAL_DCMI_Start_DMA(&hdcmi, DCMI_MODE_CONTINUOUS, (uint32_t)&pic, FrameWidth * FrameHeight * 2 / 4);
   
   //HAL_TIM_Base_Start_IT(&htim6);
   
