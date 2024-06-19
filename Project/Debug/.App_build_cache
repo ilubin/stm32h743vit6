@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>C:\Users\ilubi\Doc\Application\202406072029\H743\Project\Debug\Exe\App.out</Path>
+            <Output>
+                <Path>C:\Users\ilubi\Doc\Application\202406072029\H743\Project\Debug\List\App.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>
