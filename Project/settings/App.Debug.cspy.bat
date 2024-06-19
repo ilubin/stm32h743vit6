@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.general.xcl" --backend -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Tmp\GitHub\stm32h743vit6\Project\settings\App.Debug.general.xcl" --backend -f "C:\Users\ilubi\Tmp\GitHub\stm32h743vit6\Project\settings\App.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\ilubi\Tmp\H743\stm32h743vit6\Project\settings\App.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.2\common\bin\cspybat" -f "C:\Users\ilubi\Tmp\GitHub\stm32h743vit6\Project\settings\App.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\ilubi\Tmp\GitHub\stm32h743vit6\Project\settings\App.Debug.driver.xcl" 
 
 @echo off 
 :end

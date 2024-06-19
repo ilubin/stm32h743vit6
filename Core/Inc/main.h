@@ -53,7 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-#define APP_VERSION     "IOT_H743_20240619_V0.1.0"
+#define APP_VERSION     "IOT_H743_20240619_V0.1.1"
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
