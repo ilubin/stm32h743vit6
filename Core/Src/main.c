@@ -184,10 +184,10 @@ int main(void)
 //    LCD_Fill(0,0,LCD_W,LCD_H,BLUE);
 //    delay_ms(1000);
     /* USER CODE END WHILE */
-	printf("Hello, World! Count Now : %d .\r\n",count);
+	  printf("Hello, World! Count Now : %d .\r\n",count);
 //	count++;
-//    User_UART_Send_RTC();
-//	delay_ms(1000);
+    User_UART_Send_RTC();
+	  delay_ms(1000);
 //    HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
 //    delay_ms(1000);
 //    HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
