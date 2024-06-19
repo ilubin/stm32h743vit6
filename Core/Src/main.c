@@ -152,8 +152,8 @@ int main(void)
 //  
 //  LCD_Set_Address(0,0,LCD_W-1,LCD_H-1);
 //  HAL_SPI_Transmit(&hspi2,(uint8_t*)imgArray_Flash,LCD_W * LCD_H * 2,HAL_SPI_TIMEOUT_DEFAULT_VALUE);
-  //Camera_Init(FRAMESIZE_QQVGA2);
-  //HAL_DCMI_Start_DMA(&hdcmi, DCMI_MODE_CONTINUOUS, (uint32_t)&pic, FrameWidth * FrameHeight * 2 / 4);
+  Camera_Init(FRAMESIZE_QQVGA2);
+  HAL_DCMI_Start_DMA(&hdcmi, DCMI_MODE_CONTINUOUS, (uint32_t)&pic, FrameWidth * FrameHeight * 2 / 4);
   
   //HAL_TIM_Base_Start_IT(&htim6);
   
@@ -184,10 +184,8 @@ int main(void)
 //    LCD_Fill(0,0,LCD_W,LCD_H,BLUE);
 //    delay_ms(1000);
     /* USER CODE END WHILE */
-//	printf("Hello, World! Count Now : %d .\r\n",count);
+	  printf("Hello, World! Count Now : %d .\r\n",count);
 //	count++;
-//    User_UART_Send_RTC();
-//	delay_ms(1000);
 //    HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_RESET);
 //    delay_ms(1000);
 //    HAL_GPIO_WritePin(BLUE_LED_GPIO_Port, BLUE_LED_Pin, GPIO_PIN_SET);
